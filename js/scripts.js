@@ -2,18 +2,14 @@ const container = document.getElementById('container');
 const containerTwo = document.querySelector('.container-two')
 const num = document.createElement('h1')
 
-console.log(container)
-
-let countDown = 3
+let countDown = 30
 let points = 0
 
 const arrayNum = []
-console.log(arrayNum)
-const arrayIns = []
-console.log(arrayIns)
+console.log('numeri random; ', arrayNum)
 
 
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 5; i++) {
 
     const random = Math.floor(Math.random() * 100);
     arrayNum.push(random)
@@ -24,7 +20,8 @@ for (let i = 0; i < 3; i++) {
 const clock = setInterval(() => {
         
         countDown--
-        // console.log(countDown)
+        console.log(countDown);
+
     if(countDown == 1){
         
         container.style.display = 'none'
@@ -33,9 +30,8 @@ const clock = setInterval(() => {
     else if(countDown == 0){
         clearInterval(clock);
 
-        for(let i = 1; i <= 3; i++){
+        for(let i = 1; i <= 5; i++){
             const insert = parseInt(prompt('inserisci il ' + i + '° numero da sinistra a destra'))
-            arrayIns.push(insert)
 
             if(arrayNum.includes(insert)){
                 
